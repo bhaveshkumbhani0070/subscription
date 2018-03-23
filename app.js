@@ -20,8 +20,10 @@ app.use("/npm", express.static(__dirname + '/node_modules'));
 //     res.sendFile('index.html', { 'root': "view" });
 // });
 
-app.post('/api/store_sub', api.store_sub);
-app.get('/api/all_sub', api.all_sub);
+app.post('/api/subscript', api.subscript);
+app.get('/api/get_sub', api.all_sub);
+app.get('/api/unsubscript/:id', api.unsubscript);
+
 
 // cron for send notification to staff members
 
