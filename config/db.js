@@ -1,6 +1,6 @@
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var mongoUrl = process.env.MONGODB_URI;
+var mongoUrl = ""; //process.env.MONGODB_URI;
 exports.connect = function(callback) {
     MongoClient.connect(mongoUrl, function(err, db) {
         if (err) {
